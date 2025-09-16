@@ -1,0 +1,16 @@
+class Solution:
+    def scoreOfString(self, s: str) -> int:
+        score = 0
+
+        for i in range(len(s) - 1):
+            score += abs(ord(s[i]) - ord(s[i+1]))
+
+        return score
+
+# --- test ---
+
+s = Solution()
+
+print(s.scoreOfString("hello")) #expect 13
+print(s.scoreOfString("zaz")) #expect 50
+
